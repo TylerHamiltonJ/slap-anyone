@@ -223,9 +223,11 @@ function preload() {
   // Putin Faces
   faceAssets = {
     main: loadImage("assets/putin.png"),
+    slapLeft: loadImage("assets/putin_slap_l.png"),
+    slapRight: loadImage("assets/putin_slap_r.png"),
   };
   // Hands
-  handstart = loadImage("assets/fist2.png");
+  handstart = loadImage("assets/hand2.png");
   rarehand1 = loadImage("assets/rarehand1.png");
   rarehand2 = loadImage("assets/rarehand2.png");
   fishHand = loadImage("assets/fish.png");
