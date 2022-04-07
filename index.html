@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Need to get in touch? Email info@punch-putin.com -->
+  <!-- Author: Tyler Hamilton -->
+  <!-- Follow me on Twitter! @tylerjamilton -->
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TMNM36L");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script
+      async
+      src="https://tags.refinery89.com/v2/punchputincom.js"
+    ></script>
+    <!-- <script
+      async
+      data-ad-client="pub-3359080986057282"
+      data-ad-frequency-hint="30s"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      window.adsbygoogle = window.adsbygoogle || [];
+      var adBreak = (adConfig = function (o) {
+        adsbygoogle.push(o);
+      });
+    </script> -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="library/p5.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="library/addons/p5.sound.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="library/p5.dom.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="style.css?v=1.6.2" />
+    <title>How hard can you punch Putin?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How hard can you punch Putin?" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://punch-putin.com" />
+    <meta property="og:title" content="How hard can you punch Putin?" />
+    <meta property="og:description" content="How hard can you punch Putin?" />
+    <meta
+      property="og:image"
+      content="https://punch-putin.com/assets/banner.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://punch-putin.com" />
+    <meta name="twitter:title" content="How hard can you punch Putin?" />
+    <meta name="twitter:description" content="How hard can you punch Putin?" />
+    <meta
+      name="twitter:image"
+      content="https://punch-putin.com/assets/banner.jpg"
+    />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TMNM36L"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="p5_loading" class="loadingclass">
+      <div class="loadingIcon rotating"></div>
+    </div>
+    <!-- <div style="min-height: 90px" class="r89-desktop-leaderboard-atf"></div> -->
+    <!-- <div id="april-fools" class="unselectable" onclick="toggleAprilFools()">
+      <div class="banner-content">
+Content
+      </div>
+    </div> -->
+
+    <!-- body -->
+    <div id="container" class="unselectable">
+      <input
+        type="file"
+        style="display: none"
+        id="upload"
+        multiple="true"
+        accept="image/*"
+      />
+      <label for="upload" id="file-upload">
+        <div class="uploadIcon"></div>
+      </label>
+      <span id="score" class="unselectable" onclick="swapUnit()">0km/h</span>
+      <div id="socials">
+        <ul>
+          <li><a id="twitter" href="">Tweet your score.</a></li>
+          <li>
+            <a id="facebook" target="_blank" class="share-popup" href=""
+              >Share on Facebook.</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="donation">
+        <ul>
+          <li>
+            ☕ <a href="https://ko-fi.com/abrahamilton">Buy me a coffee.</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="units" onclick="swapUnit()">PUNCH IN MPH 🇺🇸</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <!-- Load BodyPix -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <script
+      src="./modifyUI.js?version=1.2.5"
+      type="text/javascript"
+      language="javascript"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./imgCrop.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./remove.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./main.js?version=1.2.5"
+    ></script>
+  </body>
+</html>
