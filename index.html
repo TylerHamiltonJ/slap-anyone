@@ -133,9 +133,9 @@ Content
         multiple="true"
         accept="image/*"
       />
-      <label for="upload" id="file-upload">
+      <div id="file-upload" onclick="selectFace()">
         <div class="uploadIcon"></div>
-      </label>
+      </div> 
       <span id="score" class="unselectable" onclick="swapUnit()">0km/h</span>
       <div id="socials">
         <ul>
@@ -158,6 +158,9 @@ Content
 
       <div id="units" onclick="swapUnit()">PUNCH IN MPH 🇺🇸</div>
     </div>
+    <div id="face-selection">
+      <div class="grid unselectable">
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
     <!-- Load BodyPix -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
@@ -170,6 +173,11 @@ Content
       language="javascript"
       type="text/javascript"
       src="./imgCrop.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./loadFaces.js"
     ></script>
     <script
       language="javascript"

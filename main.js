@@ -8,9 +8,9 @@ function preventBehavior(e) {
   e.preventDefault();
 }
 
-document.addEventListener("touchmove", preventBehavior, {
-  passive: false,
-});
+// document.addEventListener("touchmove", preventBehavior, {
+//   passive: false,
+// });
 function Face() {
   this.graphics = {
     loadedFace: faceAssets.main,
@@ -162,6 +162,7 @@ let W = container.getBoundingClientRect().width;
 let H = container.getBoundingClientRect().height;
 let secretCounter = 0;
 let faceAssets = {};
+var chosenFace = "Putin"
 
 function removeStartScreen() {
   let socials = document.getElementById("socials");
@@ -247,8 +248,8 @@ function setup() {
   let facebook = document.getElementById("facebook");
 
   let speed = 0;
-  twitter.href = `https://twitter.com/intent/tweet?url=https%3A%2F%2Fpunch-putin.com&text=I%20punched%20Putin%20${speed}${speedUnits}%21&hashtags=PunchPutin`;
-  facebook.href = `http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunch-putin.com&quote=I%20punched%20Putin%20${speed}${speedUnits}%21`;
+  twitter.href = `https://twitter.com/intent/tweet?url=https%3A%2F%2Fpunch-putin.com&text=I%20punched%20${chosenFace}%20${speed}${speedUnits}%21&hashtags=PunchPutin`;
+  facebook.href = `http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunch-putin.com&quote=I%20punched%${chosenFace}%20${speed}${speedUnits}%21`;
   ready.volume(0.4);
   ready.play();
   hand = new Hand();
@@ -356,8 +357,8 @@ function draw() {
 
     let twitter = document.getElementById("twitter");
     let facebook = document.getElementById("facebook");
-    twitter.href = `https://twitter.com/intent/tweet?url=https%3A%2F%2Fpunch-putin.com&text=I%20punched%20Putin%20${speed}${speedUnits}%21&hashtags=PunchPutin`;
-    facebook.href = `http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunch-putin.com&quote=I%20punched%20Putin%20${speed}${speedUnits}%21`;
+    twitter.href = `https://twitter.com/intent/tweet?url=https%3A%2F%2Fpunch-putin.com&text=I%20punched%20${chosenFace}%20${speed}${speedUnits}%21&hashtags=PunchPutin`;
+    facebook.href = `http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunch-putin.com&quote=I%20punched%20${chosenFace}%20${speed}${speedUnits}%21`;
     jiggy.stop();
 
     score.style.transition = ".2s";
